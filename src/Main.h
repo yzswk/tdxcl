@@ -1,7 +1,6 @@
-#ifndef __MAIN_H__
+﻿#ifndef __MAIN_H__
 #define __MAIN_H__
 
-#pragma pack(push,1)
 
 #include "StdAfx.h"
 #include <float.h>
@@ -10,7 +9,7 @@
 
 // --- for TDX --- //
 typedef void(*pPluginFUNC)(int nCount, float *pOut, float *a, float *b, float *c);
-
+#pragma pack(push,1)
 typedef struct tagPluginTCalcFuncInfo
 {
     unsigned short nFuncMark; // 
@@ -152,7 +151,7 @@ typedef struct tagCALCINFO
 		数组大小为m_nNumData,数据有效范围为m_nParam1Start--m_nNumData.
 		在时间上m_pData[x] 与 m_pfParam1[x]是一致的
 */
-
+#pragma pack(pop)
 __declspec(dllexport) BOOL RegisterTdxFunc(PluginTCalcFuncInfo **pInfo);
  
 /********************************************************************/
@@ -177,5 +176,5 @@ __declspec(dllexport) int WINAPI ZSFXVAR(CALCINFO* pData);  // 中枢方向
 
 
 
-#pragma pack(pop)
+
 #endif

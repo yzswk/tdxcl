@@ -1,7 +1,7 @@
 #ifndef __TDXCL_H__
 #define __TDXCL_H__
 
-#pragma pack(push,1)
+
 
 // --- 包含处理
 void BaoHan(int nCount, float *pDirection, float *pOutHigh, float *pOutLow, float *pInclude, float *pHigh, float *pLow);
@@ -9,7 +9,7 @@ void BaoHan(int nCount, float *pDirection, float *pOutHigh, float *pOutLow, floa
 void Bi2(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow);
 // --- 特征序列画段
 void Duan0(int nCount, float *pOut, float *pIn, float *pHigh, float *pLow);
-
+#pragma pack(push,1)
 struct ZhongShu
 {
     bool  bValid;
